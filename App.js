@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import Button from './src/components/Button';
+import GameLoop from './src/GameLoop';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Button />
+      <GameLoop />
       <StatusBar style="auto" />
     </View>
   );
