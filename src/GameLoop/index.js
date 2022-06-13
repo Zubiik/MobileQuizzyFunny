@@ -5,20 +5,31 @@ import QuestionsDisplay from '../components/QuestionsDisplay';
 import data from '../data/data.json';
 
 export default function GameLoop() {
-  const dataQuestions = data.firstTheme.questions;
+  const questionsList = data.firstTheme.questions;
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [dataQuestionCopy, setDataQuestionCopy] = useState(dataQuestions);
+  const [gameData, setGameData] = useState(questionsList);
 
-  const answerCallback = (userAnswer) => {
+  var userAnswer = -1;
+
+  const answerCallback = () => {
     setQuestionIndex(questionIndex + 1);
+    var arrayCopy = gameData;
+    arrayCopy[questionIndex].userAnswer = userAnswer;
+    setGameData(arrayCopy);
+    //on reset userAnswer a une valeur par defaut pour la prochaine question
+    userAnswer = -1;
   };
-  //dataQuestionCopy.question[questionIndex].userAnswer.push;
+
+  const onPress = (index) => {
+    userAnswer = index;
+  };
   return (
     <View style={styles.container}>
-      {questionIndex > dataQuestions.length - 1 ? null : (
+      {questionIndex > questionsList.length - 1 ? null : (
         <QuestionsDisplay
+          onPress={onPress}
           answerCallback={answerCallback}
-          question={dataQuestions[questionIndex]}
+          question={questionsList[questionIndex]}
         />
       )}
 

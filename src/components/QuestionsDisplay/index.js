@@ -2,18 +2,24 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Container, ItemContainer, TextCustom } from './styled';
 import Button from '../Button';
-// TODO changer le nom du composant
-// TODO changer la props de data => question
-export default function QuestionsDisplay({ question, answerCallback }) {
-  const onPress = () => {};
 
+export default function QuestionsDisplay({
+  question,
+  answerCallback,
+  onPress,
+}) {
   return (
     <Container>
       <Text>{question.question}</Text>
 
       {question.choices.map((choice, index) => {
         return (
-          <TouchableOpacity onPress={onPress}>
+          <TouchableOpacity
+            key={index}
+            onPress={() => {
+              onPress(index);
+            }}
+          >
             <ItemContainer>
               <TextCustom>{choice}</TextCustom>
             </ItemContainer>
