@@ -1,25 +1,50 @@
 {
-  "firstTheme":{
-    "themeName":"Theme 1",
+  "myArray":[
+    {
+    "themeName": "Cinema",
     "questions": [
       {
-        "question":"En quelle année le Parrain a-t-il été publié pour la première fois?",
-        "choices":["1978","1972","1967","1980"],
-        "answer":1,
+        "question": "En quelle année le Parrain a-t-il été publié pour la première fois?",
+        "choices": ["1978", "1972", "1967", "1980"],
+        "answer": 1,
         "userAnswer": -1
       },
       {
-        "question":"Quel film de 1982 a été largement accepté par les cinéphiles pour sa représentation de l'amour entre un jeune garçon de banlieue sans père et un visiteur perdu, bienveillant et nostalgique d'une autre planète?",
-        "choices":["Rick et morty","Gosth Buster","E.T","Paul"],
-        "answer":2,
+        "question": "Quel film de 1982 a été largement accepté par les cinéphiles pour sa représentation de l'amour entre un jeune garçon de banlieue sans père et un visiteur perdu, bienveillant et nostalgique d'une autre planète?",
+        "choices": ["Rick et morty", "Gosth Buster", "E.T", "Paul"],
+        "answer": 2,
         "userAnswer": -1
       },
       {
-        "question":"Dans quel film Hugh Jackman a-t-il joué le rôle d'un magicien rival du personnage joué par Christian Bale?",
-        "choices":["Le joker","The Great Escape","Hitman","Le prestige"],
-        "answer":3,
+        "question": "Dans quel film Hugh Jackman a-t-il joué le rôle d'un magicien rival du personnage joué par Christian Bale?",
+        "choices": ["Le joker", "The Great Escape", "Hitman", "Le prestige"],
+        "answer": 3,
+        "userAnswer": -1
+      }
+    ]
+  },
+  {
+    "themeName": "Sport",
+    "questions": [
+      {
+        "question": "En quelle année la france a remporter la coupe du monde?",
+        "choices": ["1978", "1972", "1967", "1980"],
+        "answer": 1,
+        "userAnswer": -1
+      },
+      {
+        "question": "Quel film de 1982 a été largement accepté par les cinéphiles pour sa représentation de l'amour entre un jeune garçon de banlieue sans père et un visiteur perdu, bienveillant et nostalgique d'une autre planète?",
+        "choices": ["Rick et morty", "Gosth Buster", "E.T", "Paul"],
+        "answer": 2,
+        "userAnswer": -1
+      },
+      {
+        "question": "Dans quel film Hugh Jackman a-t-il joué le rôle d'un magicien rival du personnage joué par Christian Bale?",
+        "choices": ["Le joker", "The Great Escape", "Hitman", "Le prestige"],
+        "answer": 3,
         "userAnswer": -1
       }
     ]
   }
+]
 }

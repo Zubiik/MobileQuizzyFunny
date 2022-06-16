@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import GameLoop from './src/GameLoop';
+import Home from './src/pages/Home';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <GameLoop />
+      <Home />
       <StatusBar style="auto" />
     </View>
   );

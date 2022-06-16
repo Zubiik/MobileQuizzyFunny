@@ -6,8 +6,8 @@ import UserResult from '../components/UserResult';
 import data from '../data/data.json';
 import Button from '../components/Button';
 
-export default function GameLoop() {
-  const questionsList = data.firstTheme.questions;
+export default function GameLoop({ selectedTheme }) {
+  const questionsList = data.myArray[selectedTheme].questions;
   const [questionIndex, setQuestionIndex] = useState(0);
   const [finalResult, setFinalResult] = useState();
   const [gameData, setGameData] = useState(questionsList);
@@ -35,6 +35,7 @@ export default function GameLoop() {
   };
 
   const onPress = (index) => {
+    console.log(index);
     userAnswer = index;
   };
   return (
