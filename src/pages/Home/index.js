@@ -12,20 +12,23 @@ export default function Home() {
   const answerCallback = () => {};
   return (
     <View style={styles.container}>
-      {themePicker.map((item, index) => {
-        return (
-          <TouchableOpacity
-            key={index}
-            onPress={() => {
-              console.log(themeIndex);
-              setThemeIndex(index);
-            }}
-          >
-            <ThemeCard label={item.themeName} />
-          </TouchableOpacity>
-        );
-      })}
-      <GameLoop selectedTheme={themeIndex} />
+      {themeIndex === 0 ? (
+        themePicker.map((item, index) => {
+          return (
+            <TouchableOpacity
+              key={index}
+              onPress={() => {
+                console.log(themeIndex);
+                setThemeIndex(index);
+              }}
+            >
+              <ThemeCard label={item.themeName} />
+            </TouchableOpacity>
+          );
+        })
+      ) : (
+        <GameLoop selectedTheme={themeIndex} />
+      )}
       <StatusBar style="auto" />
     </View>
   );
