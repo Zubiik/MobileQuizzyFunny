@@ -24,24 +24,24 @@
     ]
   },
   {
-    "themeName": "Sport",
+    "themeName": "Football",
     "questions": [
       {
         "question": "En quelle année la france a remporter la coupe du monde?",
-        "choices": ["1978", "1972", "1967", "1980"],
-        "answer": 1,
-        "userAnswer": -1
-      },
-      {
-        "question": "Quel film de 1982 a été largement accepté par les cinéphiles pour sa représentation de l'amour entre un jeune garçon de banlieue sans père et un visiteur perdu, bienveillant et nostalgique d'une autre planète?",
-        "choices": ["Rick et morty", "Gosth Buster", "E.T", "Paul"],
+        "choices": ["2000", "2019", "1998", "1988"],
         "answer": 2,
         "userAnswer": -1
       },
       {
-        "question": "Dans quel film Hugh Jackman a-t-il joué le rôle d'un magicien rival du personnage joué par Christian Bale?",
-        "choices": ["Le joker", "The Great Escape", "Hitman", "Le prestige"],
-        "answer": 3,
+        "question": "Quelle est la durée d'un match de football ?",
+        "choices": ["90 minutes", "120 minutes", "50 minutes", "45 minutes"],
+        "answer": 0,
+        "userAnswer": -1
+      },
+      {
+        "question": "Qui est le meilleur buteur du FC Barcelone ?",
+        "choices": ["Luis Suarez", "Lionel Messi", "Neymar", "Patrick Kluivert"],
+        "answer": 1,
         "userAnswer": -1
       }
     ]
