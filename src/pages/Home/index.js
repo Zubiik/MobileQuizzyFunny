@@ -1,18 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import Button from '../../components/Button';
 import ThemeCard from '../../components/ThemeCard';
 import data from '../../data/data.json';
 import GameLoop from '../../GameLoop';
 
 export default function Home() {
   const themePicker = data.myArray;
-  const [themeIndex, setThemeIndex] = useState(0);
+  const [themeIndex, setThemeIndex] = useState(-1);
+  const [questionIndex, setQuestionIndex] = useState(0);
 
-  const answerCallback = () => {};
   return (
     <View style={styles.container}>
-      {themeIndex === 0 ? (
+      {themeIndex === -1 ? (
         themePicker.map((item, index) => {
           return (
             <TouchableOpacity
@@ -20,6 +21,7 @@ export default function Home() {
               onPress={() => {
                 console.log(themeIndex);
                 setThemeIndex(index);
+                setQuestionIndex(0);
               }}
             >
               <ThemeCard label={item.themeName} />
@@ -27,7 +29,14 @@ export default function Home() {
           );
         })
       ) : (
-        <GameLoop selectedTheme={themeIndex} />
+        <View>
+          <GameLoop
+            selectedTheme={themeIndex}
+            questionIndex={questionIndex}
+            setQuestionIndex={setQuestionIndex}
+          />
+          <Button textButton={'Home'} callback={() => setThemeIndex(-1)} />
+        </View>
       )}
       <StatusBar style="auto" />
     </View>

@@ -6,9 +6,12 @@ import UserResult from '../components/UserResult';
 import data from '../data/data.json';
 import Button from '../components/Button';
 
-export default function GameLoop({ selectedTheme }) {
+export default function GameLoop({
+  selectedTheme,
+  questionIndex,
+  setQuestionIndex,
+}) {
   const questionsList = data.myArray[selectedTheme].questions;
-  const [questionIndex, setQuestionIndex] = useState(0);
   const [finalResult, setFinalResult] = useState();
   const [gameData, setGameData] = useState(questionsList);
 
@@ -53,7 +56,6 @@ export default function GameLoop({ selectedTheme }) {
           question={questionsList[questionIndex]}
         />
       )}
-      <Button textButton={'Home'} callback={() => setQuestionIndex(0)} />
       <StatusBar style="auto" />
     </View>
   );
