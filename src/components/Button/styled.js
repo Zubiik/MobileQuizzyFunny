@@ -1,13 +1,12 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  background-color: white;
   align-items: center;
   flex-direction: column-reverse;
 `;
 
 export const ButtonBox = styled.TouchableOpacity`
-  background-color: aliceblue;
+  background-color: ${({ theme }) => theme.lila};
   width: 100px;
   height: 40px;
   border-radius: 10px;
