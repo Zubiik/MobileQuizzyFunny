@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { CardContainer } from './styled';
+import { CardContainer, CardText } from './styled';
 
 export default function ThemeCard({ label }) {
   return (
     <CardContainer>
-      <Text>{label}</Text>
+      <CardText>{label}</CardText>
     </CardContainer>
   );
 }

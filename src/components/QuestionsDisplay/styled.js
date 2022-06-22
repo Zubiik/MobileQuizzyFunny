@@ -10,11 +10,18 @@ export const Container = styled.View`
 export const ItemContainer = styled.View`
   padding: 10px;
   margin: 10px;
-  border-radius: 10px;
-  background-color: aliceblue;
+  min-width: 300px;
+  align-items: center;
+  border-radius: 30px;
+  background-color: ${({ theme }) => theme.lila};
 `;
 export const TextCustom = styled.Text`
   font-size: 20px;
-  color: black;
+  color: white;
+  padding: 4px;
+`;
+export const QuestionCustom = styled.Text`
+  font-size: 18px;
+  color: ${({ theme }) => theme.purple};
   padding: 4px;
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Container, ItemContainer, TextCustom } from './styled';
+import { Container, ItemContainer, TextCustom, QuestionCustom } from './styled';
 import Button from '../Button';
 
 export default function QuestionsDisplay({
@@ -10,7 +10,7 @@ export default function QuestionsDisplay({
 }) {
   return (
     <Container>
-      <Text>{question.question}</Text>
+      <QuestionCustom>{question.question}</QuestionCustom>
 
       {question.choices.map((choice, index) => {
         return (
@@ -26,7 +26,7 @@ export default function QuestionsDisplay({
           </TouchableOpacity>
         );
       })}
-      <Button textButton={'coucou'} callback={answerCallback} />
+      <Button textButton={'NEXT'} callback={answerCallback} />
     </Container>
   );
 }
