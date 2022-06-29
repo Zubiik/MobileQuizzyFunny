@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native';
 import Button from '../../components/Button';
 import ThemeCard from '../../components/ThemeCard';
 import data from '../../data/data.json';
@@ -13,31 +13,32 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      {themeIndex === -1 ? (
-        themePicker.map((item, index) => {
-          return (
-            <TouchableOpacity
-              key={index}
-              onPress={() => {
-                console.log(themeIndex);
-                setThemeIndex(index);
-                setQuestionIndex(0);
-              }}
-            >
-              <ThemeCard label={item.themeName} />
-            </TouchableOpacity>
-          );
-        })
-      ) : (
-        <View>
-          <GameLoop
-            selectedTheme={themeIndex}
-            questionIndex={questionIndex}
-            setQuestionIndex={setQuestionIndex}
-          />
-          <Button textButton={'Home'} callback={() => setThemeIndex(-1)} />
-        </View>
-      )}
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {themeIndex === -1 ? (
+          themePicker.map((item, index) => {
+            return (
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  setThemeIndex(index);
+                  setQuestionIndex(0);
+                }}
+              >
+                <ThemeCard label={item.themeName} />
+              </TouchableOpacity>
+            );
+          })
+        ) : (
+          <View>
+            <GameLoop
+              selectedTheme={themeIndex}
+              questionIndex={questionIndex}
+              setQuestionIndex={setQuestionIndex}
+            />
+            <Button textButton={'Home'} callback={() => setThemeIndex(-1)} />
+          </View>
+        )}
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );

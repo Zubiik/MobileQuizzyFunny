@@ -6,3 +6,7 @@ export const CardContainer = styled.View`
   border-radius: 10px;
   background-color: aliceblue;
 `;
+export const TextCustom = styled.Text`
+  color: ${({ theme }) => theme.purple};
+  font-size: 30;
+`;

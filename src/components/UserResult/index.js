@@ -1,15 +1,16 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { CardContainer } from './styled';
+import { TextCustom } from './styled';
 
 export default function UserResult({ resultCalcul, text, arrayLenght }) {
   resultCalcul();
 
   return (
     <View>
-      <Text>
+      <TextCustom>Votre score est de</TextCustom>
+      <TextCustom>
         {text}/{arrayLenght}
-      </Text>
+      </TextCustom>
     </View>
   );
 }
